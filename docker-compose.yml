@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_USER: test
+      MYSQL_DATABASE: lunit
+      MYSQL_PASSWORD: skdisk17
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3366:3306"
+    container_name: lunit_db
+    networks:
+      - backend-network
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+  spring-boot:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: lunit
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    container_name: lunit_spring
+    restart: always
+    depends_on:
+      - database
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://lunit_db:3306/lunit?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useLegacyDatetimeCode=false
+      SPRING_DATASOURCE_USERNAME: test
+      SPRING_DATASOURCE_PASSWORD: skdisk17
+    networks:
+      - backend-network
+networks:
+  backend-network:

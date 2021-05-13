@@ -1,0 +1,124 @@
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+= Lunit API Document
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 6
+
+
+== 사용자
+=== 1. 로그인
+include::{snippets}/login/http-request.adoc[]
+include::{snippets}/login/request-parameters.adoc[]
+
+_Response_
+
+include::{snippets}/login/response-fields.adoc[]
+include::{snippets}/login/response-body.adoc[]
+
+=== 2. 회원가입
+include::{snippets}/sign-up/http-request.adoc[]
+
+_Request_
+include::{snippets}/sign-up/request-fields.adoc[]
+
+_Response_
+
+include::{snippets}/sign-up/response-fields.adoc[]
+include::{snippets}/sign-up/response-body.adoc[]
+
+=== 3. 현재 접속한 사용자 정보 반환
+include::{snippets}/user-info/http-request.adoc[]
+_Response_
+include::{snippets}/user-info/response-fields.adoc[]
+include::{snippets}/user-info/response-body.adoc[]
+
+=== 4. 회원 정보 수정
+include::{snippets}/modify-info/http-request.adoc[]
+include::{snippets}/modify-info/request-fields.adoc[]
+
+=== 5. 패스워드 변경
+include::{snippets}/modify-pw/http-request.adoc[]
+include::{snippets}/modify-pw/request-fields.adoc[]
+
+== 이미지
+=== 1. 슬라이드 이미지 업로드
+include::{snippets}/upload-image/curl-request.adoc[]
+
+=== 2. 슬라이드 이미지 다운로드
+include::{snippets}/image-download/http-request.adoc[]
+include::{snippets}/image-download/path-parameters.adoc[]
+
+_Request_
+
+include::{snippets}/image-download/request-fields.adoc[]
+
+=== 3. 파일명 검색을 통한 이미지 리스트 출력
+include::{snippets}/image-search/http-request.adoc[]
+
+_Request_
+
+include::{snippets}/image-search/request-fields.adoc[]
+
+_Response_
+
+include::{snippets}/image-search/response-fields.adoc[]
+include::{snippets}/image-search/response-body.adoc[]
+
+=== 4. 업로드한 전체 이미지 파일 리스트
+include::{snippets}/image-list/http-request.adoc[]
+include::{snippets}/image-list/path-parameters.adoc[]
+
+
+_Response_
+
+include::{snippets}/image-list/response-fields.adoc[]
+include::{snippets}/image-list/response-body.adoc[]
+
+=== 5. 이미지 id를 통한 이미지 url 반환
+include::{snippets}/image-url/http-request.adoc[]
+include::{snippets}/image-url/path-parameters.adoc[]
+
+_Response_
+
+include::{snippets}/image-url/response-fields.adoc[]
+include::{snippets}/image-url/response-body.adoc[]
+
+
+
+== 이미지 분석
+
+=== 1. 슬라이드 이미지 분석 요청
+include::{snippets}/image-analyze/http-request.adoc[]
+include::{snippets}/image-analyze/path-parameters.adoc[]
+
+_Response_
+
+include::{snippets}/image-analyze/response-fields.adoc[]
+include::{snippets}/image-analyze/response-body.adoc[]
+
+=== 2. 슬라이드 이미지 분석 결과
+include::{snippets}/report-response/http-request.adoc[]
+include::{snippets}/report-response/path-parameters.adoc[]
+
+_Response_
+include::{snippets}/report-response/response-fields.adoc[]
+include::{snippets}/report-response/response-body.adoc[]
+
+=== 3. 사용자의 이미지 분석 요청 이력 조회
+include::{snippets}/analyze-records/http-request.adoc[]
+
+_Response_
+include::{snippets}/analyze-records/response-fields.adoc[]
+include::{snippets}/analyze-records/response-body.adoc[]
+
+
+=== 4. 요청한 이미지의 분석 결과 전체 조회
+include::{snippets}/analyze-all-results/http-request.adoc[]
+
+_Response_
+
+include::{snippets}/analyze-all-results/response-fields.adoc[]
+include::{snippets}/analyze-all-results/response-body.adoc[]
